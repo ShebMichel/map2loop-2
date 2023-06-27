@@ -55,7 +55,7 @@ setuptools.setup(
     #     "cftime>=1.4.0",
     #     "map2model-loop3d"
     # ],
-    url="https://github.com/Loop3D/map2loop-2",
+    url="https://github.com/ShebMichel/map2loop-2",
     packages=setuptools.find_packages(),
     classifiers=[
         "Development Status :: 4 - Beta",
