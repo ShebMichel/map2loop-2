@@ -8,8 +8,6 @@ notebooks/Testing.ipynb
 _version.py
 3/
 
-git rm --cached
-
 # Created by https://www.toptal.com/developers/gitignore/api/python,visualstudiocode,c++,cmake
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,visualstudiocode,c++,cmake
 
