@@ -331,7 +331,7 @@ class Project(object):
             Additional dictionary options to use such as decimates and fault length limits see https://github.com/Loop3D/map2loop-2/issues/56
         """
         # Deal with deprecated parameters
-        print('I am here in line 334 of project.py')
+        print('I am here in line 334 of project_py')
         if "quiet" in kwargs:
             warnings.warn(
                 "quiet is deprecated and will be removed in later versions of map2loop.  Please use the parameter verbose_level instead",
