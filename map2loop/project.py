@@ -359,7 +359,7 @@ class Project(object):
                 DeprecationWarning,
             )
             self.loop_project_filename = kwargs["loop_project_filename"]
-            print('I am here in line 362 of project.py, loopprojectfilename =', self.loop_project_filename)
+            print('I am here in line 362 of project.py and loopprojectfilename =', self.loop_project_filename)
         bbox_valid = False
         if (
             isinstance(bbox_3d, dict)
