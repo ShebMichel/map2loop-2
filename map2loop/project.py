@@ -358,8 +358,9 @@ class Project(object):
                 "loop_project_filename is deprecated in update_config and will be removed in later versions of map2loop.  Please use the project loop_project_filename instead",
                 DeprecationWarning,
             )
+            print('I am here in line 361 of project.py and loopprojectfilename =', self.loop_project_filename)
             self.loop_project_filename = kwargs["loop_project_filename"]
-            print('I am here in line 362 of project.py and loopprojectfilename =', self.loop_project_filename)
+            
         bbox_valid = False
         if (
             isinstance(bbox_3d, dict)
