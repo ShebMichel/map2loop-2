@@ -358,10 +358,11 @@ class Project(object):
                 "loop_project_filename is deprecated in update_config and will be removed in later versions of map2loop.  Please use the project loop_project_filename instead",
                 DeprecationWarning,
             )
-            print('I am here in line 361 of project.py and loopprojectfilename =', self.loop_project_filename)
+            print('I am here in line 361 of project.py and loopprojectfilename')
             self.loop_project_filename = kwargs["loop_project_filename"]
             
         bbox_valid = False
+        print('I am here in line 365 of project.py and bbox is False')
         if (
             isinstance(bbox_3d, dict)
             and "minx" in bbox_3d
@@ -377,6 +378,7 @@ class Project(object):
                 bbox_valid = True
 
         if bbox_valid is False:
+             print('I am here in line 381 of project.py and bbox is valid')
             warnings.warn(
                 "Invalid bounding box specified, attempting to get bounding box and projection from the map files"
             )
@@ -384,6 +386,7 @@ class Project(object):
             self.map_data.set_working_projection(project_crs)
 
         if bbox_3d is None:
+            print('I am here in line 381 of project.py and bbox is None')
             bbox_3d = {
                 "minx": 0,
                 "maxx": 1000,
@@ -418,7 +421,7 @@ class Project(object):
             self.map_data.working_projection,
         )
         self.map_data.update_filenames_with_bounding_box(bbox_str)
-
+        print('I am here in line 424 of project.py')
         bbox = tuple(
             [bbox_3d["minx"], bbox_3d["miny"], bbox_3d["maxx"], bbox_3d["maxy"]]
         )
