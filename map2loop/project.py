@@ -495,7 +495,7 @@ class Project(object):
         """The main map2loop process for reading, converting, reprojecting and interpolating map data into event, observation
         and relationship data suitable for further processing
         """
-
+        print('I am here in project.run() line 498' )
         if self.errorState != ErrorState.NONE:
             print("ERROR: Error state set at ", self.errorStateMsg)
             return
@@ -613,7 +613,8 @@ class Project(object):
             point_data = m2l_geometry.combine_point_data(
                 self.config.output_path, self.config.tmp_path
             )
-
+            print('I am here in project.run() line 616' )
+            
             Gloop = Topology.make_Loop_graph(self.config, self.map_data, point_data)
             nx.write_gml(Gloop, os.path.join(self.config.output_path, "loop.gml"))
             Topology.colour_Loop_graph(self.config.output_path, "loop")
@@ -666,7 +667,7 @@ class Project(object):
             )
 
             self.__export_png()
-
+            print('I am here in project.run() line 669' )
             pbar.update(20)  # 100%
 
     def update_loop_project_file(self):
