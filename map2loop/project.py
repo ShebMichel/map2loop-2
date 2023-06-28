@@ -378,7 +378,7 @@ class Project(object):
                 bbox_valid = True
 
         if bbox_valid is False:
-             print('I am here in line 381 of project.py and bbox is valid')
+            print('I am here in line 381 of project.py and bbox is valid')
             warnings.warn(
                 "Invalid bounding box specified, attempting to get bounding box and projection from the map files"
             )
