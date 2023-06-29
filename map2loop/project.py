@@ -362,7 +362,7 @@ class Project(object):
             self.loop_project_filename = kwargs["loop_project_filename"]
             
         bbox_valid = False
-        print('I am here in line 365 of project.py and bbox is False')
+        print('I am here in line 365 of project.py and bbox is False',str(bbox_valid))
         if (
             isinstance(bbox_3d, dict)
             and "minx" in bbox_3d
@@ -376,9 +376,9 @@ class Project(object):
                 and bbox_3d["base"] < bbox_3d["top"]
             ):
                 bbox_valid = True
-
+                print('I am here in line 79 of project.py and bbox is True',str(bbox_valid))
         if bbox_valid is False:
-            print('I am here in line 381 of project.py and bbox is valid')
+            print('I am here in line 381 of project.py and bbox is invalid')
             warnings.warn(
                 "Invalid bounding box specified, attempting to get bounding box and projection from the map files"
             )
@@ -450,7 +450,7 @@ class Project(object):
         )
 
         self.map_data.load_all_map_data(self.config)
-
+        print('End of project.py in line 453')
     def get_unit_thicknesses(self) -> dict:
         """This is a getter method for returning the thicknesses of all
         of the stratigraphic units on the map
