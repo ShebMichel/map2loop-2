@@ -426,8 +426,9 @@ class Project(object):
             [bbox_3d["minx"], bbox_3d["miny"], bbox_3d["maxx"], bbox_3d["maxy"]]
         )
         print('I am here in line 428 of project.py')
+        print('bbox value in line 429', bbox)
         minx, miny, maxx, maxy = bbox
-        print('min and max in 430: ',minx, miny, maxx, maxy )
+        print('min and max in 431: ',minx, miny, maxx, maxy)
         lat_point_list = [miny, miny, maxy, maxy, maxy]
         lon_point_list = [minx, maxx, maxx, minx, minx]
         bbox_geom = Polygon(zip(lon_point_list, lat_point_list))
@@ -438,7 +439,7 @@ class Project(object):
         if clut_path == "":
             if self.state in ["WA", "NSW", "VIC", "SA", "QLD", "ACT", "TAS"]:
                 clut_path = clut_paths[self.state]
-        print('In front of self.cofig.update and check if it passes line 441')
+        print('In front of self.config.update and check if it passes line 441')
         self.config.update(
             self.project_path,
             bbox_3d,
@@ -450,9 +451,9 @@ class Project(object):
             clut_path=clut_path,
             run_flags=run_flags,
         )
-        print('After of self.config.update and check if it passes line 453')
+        print('After of self.config.update and check if it passes line 454')
         self.map_data.load_all_map_data(self.config)
-        print('End of project.py in line 454')
+        print('End of project.py in line 456')
     def get_unit_thicknesses(self) -> dict:
         """This is a getter method for returning the thicknesses of all
         of the stratigraphic units on the map
