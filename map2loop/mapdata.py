@@ -135,7 +135,7 @@ class MapData:
             config = self.config
         else:
             self.config = config
-        # print("Loading data frames")
+        print("Loading data frames  here in line 138")
         for i in [
             Datatype.GEOLOGY,
             Datatype.STRUCTURE,
@@ -147,7 +147,7 @@ class MapData:
         for i in [Datatype.DTB_GRID]:
             self.load_rasterio_map_data(i)
         self.load_dtm()
-
+        print("End Loading data frames here in line 150")
     @beartype.beartype
     def load_map_data(self, datatype: Datatype):
         """
