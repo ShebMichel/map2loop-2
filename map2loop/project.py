@@ -425,6 +425,7 @@ class Project(object):
         bbox = tuple(
             [bbox_3d["minx"], bbox_3d["miny"], bbox_3d["maxx"], bbox_3d["maxy"]]
         )
+        print('I am here in line 428 of project.py')
         minx, miny, maxx, maxy = bbox
         lat_point_list = [miny, miny, maxy, maxy, maxy]
         lon_point_list = [minx, maxx, maxx, minx, minx]
@@ -450,7 +451,7 @@ class Project(object):
         )
 
         self.map_data.load_all_map_data(self.config)
-        print('End of project.py in line 453')
+        print('End of project.py in line 454')
     def get_unit_thicknesses(self) -> dict:
         """This is a getter method for returning the thicknesses of all
         of the stratigraphic units on the map
