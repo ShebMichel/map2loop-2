@@ -144,10 +144,11 @@ class MapData:
             Datatype.MINERAL_DEPOSIT,
         ]:
             self.load_map_data(i)
+            print('line 147 in mapdata.py and self.load_map_data(i): ',self.load_map_data(i))
         for i in [Datatype.DTB_GRID]:
             self.load_rasterio_map_data(i)
         self.load_dtm()
-        print("End Loading data frames here in line 150")
+        print("End Loading data frames here in line 151")
     @beartype.beartype
     def load_map_data(self, datatype: Datatype):
         """
