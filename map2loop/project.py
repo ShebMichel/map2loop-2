@@ -620,7 +620,7 @@ class Project(object):
             point_data = m2l_geometry.combine_point_data(
                 self.config.output_path, self.config.tmp_path
             )
-            print('I am here in project.run() line 616' )
+            print('I am here in project.run() line 623' )
             
             Gloop = Topology.make_Loop_graph(self.config, self.map_data, point_data)
             nx.write_gml(Gloop, os.path.join(self.config.output_path, "loop.gml"))
@@ -674,7 +674,7 @@ class Project(object):
             )
 
             self.__export_png()
-            print('I am here in project.run() line 677 end here' )
+            print('I am here in project.run() line 677 end of project' )
             pbar.update(20)  # 100%
 
     def update_loop_project_file(self):
