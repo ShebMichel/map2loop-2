@@ -502,7 +502,7 @@ class Project(object):
         """The main map2loop process for reading, converting, reprojecting and interpolating map data into event, observation
         and relationship data suitable for further processing
         """
-        print('I am here in project.run() line 498' )
+        print('I am here in project.run() line 505' )
         if self.errorState != ErrorState.NONE:
             print("ERROR: Error state set at ", self.errorStateMsg)
             return
