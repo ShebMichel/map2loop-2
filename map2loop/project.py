@@ -674,7 +674,7 @@ class Project(object):
             )
 
             self.__export_png()
-            print('I am here in project.run() line 669' )
+            print('I am here in project.run() line 677 end here' )
             pbar.update(20)  # 100%
 
     def update_loop_project_file(self):
